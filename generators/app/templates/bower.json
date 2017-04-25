@@ -3,9 +3,11 @@
 <% if (description) { -%>  "description": "<%= description %>",
 <% } -%>
   "main": "<%= name %>.html",
+  "version": "0.0.1",
+  "license": "MIT",
   "devDependencies": {
     "iron-demo-helpers": "PolymerElements/iron-demo-helpers#2.0-preview",
-    "web-component-tester": "^6.0.0-prerelease.5",
-    "webcomponentsjs": "webcomponents/webcomponentsjs#^1.0.0-rc.5"
+    "web-component-tester": "^6",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^1"
   }
 }

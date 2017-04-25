@@ -6,7 +6,7 @@
 
     <title><%= name %> test</title>
 
-    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+    <script src="../../webcomponentsjs/webcomponents-loader.js"></script>
     <script src="../../web-component-tester/browser.js"></script>
 
     <link rel="import" href="../<%= name %>.html">
@@ -33,7 +33,7 @@
           assert.equal(element.prop1, '<%= name %>');
           var elementShadowRoot = element.shadowRoot;
           var elementHeader = elementShadowRoot.querySelector('h2');
-          assert.equal(elementHeader.innerHTML, 'Hello <%= name %>!');
+          assert.equal(elementHeader.textContent, 'Hello <%= name %>!');
         });
 
         test('setting a property on the element works', function() {
@@ -42,7 +42,7 @@
           assert.equal(element.prop1, 'new-prop1');
           var elementShadowRoot = element.shadowRoot;
           var elementHeader = elementShadowRoot.querySelector('h2');
-          assert.equal(elementHeader.innerHTML, 'Hello new-prop1!');
+          assert.equal(elementHeader.textContent, 'Hello new-prop1!');
         });
 
       });
