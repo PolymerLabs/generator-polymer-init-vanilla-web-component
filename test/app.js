@@ -3,7 +3,7 @@ var path = require('path');
 var assert = require('yeoman-assert');
 var helpers = require('yeoman-test');
 
-describe('generator-polymer-init-2-vanilla-web-component:app', function () {
+describe('generator-polymer-init-vanilla-web-component:app', function () {
 
   it('creates files', function () {
     return helpers.run(path.join(__dirname, '../generators/app'))
@@ -14,9 +14,9 @@ describe('generator-polymer-init-2-vanilla-web-component:app', function () {
           'demo',
           'demo/index.html',
           'test',
-          //'.gitignore',
+          'test/x-foo_test.html',
           'bower.json',
-          //'x-foo.html',
+          'x-foo.html',
           'package.json',
           'index.html',
           'README.md'
