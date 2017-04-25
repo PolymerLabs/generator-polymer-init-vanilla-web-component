@@ -3,6 +3,7 @@
 <% if (description) { -%>  "description": "<%= description %>",
 <% } -%>
   "main": "<%= name %>.html",
+  "version": "0.0.1",
   "directories": {
     "test": "test"
   },
