@@ -4,6 +4,7 @@
 <% } -%>
   "main": "<%= name %>.html",
   "version": "0.0.1",
+  "license": "MIT",
   "devDependencies": {
     "iron-demo-helpers": "PolymerElements/iron-demo-helpers#2.0-preview",
     "web-component-tester": "^6",
