@@ -1,0 +1,16 @@
+{
+  "name": "<%= name %>",
+<% if (description) { -%>  "description": "<%= description %>",
+<% } -%>
+  "main": "<%= name %>.html",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "start": "polymer serve",
+    "test": "polymer test"
+  },
+  "devDependencies": {
+    "web-component-tester": "^6.0.0-prerelease.5"
+  }
+}
