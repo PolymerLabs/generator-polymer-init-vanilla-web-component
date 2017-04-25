@@ -1,0 +1,39 @@
+{
+  "name": "generator-polymer-init-vanilla-web-component",
+  "version": "0.0.1",
+  "description": "A starting point for building a vanilla web component element",
+  "homepage": "https://github.com/valdrinkoshi/generator-polymer-init-vanilla-web-component",
+  "repository": "valdrinkoshi/generator-polymer-init-vanilla-web-component",
+  "author": {
+    "name": "Valdrin Koshi",
+    "email": "<valdrinkoshi@gmail.com>",
+    "url": "https://github.com/valdrinkoshi"
+  },
+  "files": [
+    "generators"
+  ],
+  "main": "generators/app/index.js",
+  "keywords": [
+    "yeoman-generator",
+    "web-components"
+  ],
+  "dependencies": {
+    "yeoman-generator": "^1.0.1"
+  },
+  "devDependencies": {
+    "yeoman-test": "^1.0.0",
+    "yeoman-assert": "^2.0.0",
+    "eslint": "^3.12.0",
+    "eslint-config-google": "^0.7.0",
+    "gulp": "^3.9.0",
+    "gulp-line-ending-corrector": "^1.0.1",
+    "gulp-mocha": "^2.0.0",
+    "gulp-nsp": "^2.1.0",
+    "gulp-plumber": "^1.0.0"
+  },
+  "scripts": {
+    "prepublish": "gulp prepublish",
+    "test": "gulp"
+  },
+  "license": "BSD-3-Clause"
+}

@@ -1,0 +1,88 @@
+<!--
+`<%= name %>`
+<%= description %>
+
+@demo demo/index.html
+-->
+<template id="<%= name %>">
+  <style>
+     :host {
+      display: block;
+    }
+  </style>
+  <h2>Hello <span id="prop1"></span>!</h2>
+</template>
+
+<script>
+  (doc => {
+    const templ = doc.querySelector('template#<%= name %>');
+
+    class <%= elementClassName %> extends HTMLElement {
+
+      static get observedAttributes() {
+        return ['prop1'];
+      }
+
+      attributeChangedCallback(name, old, value) {
+        if (old !== value) {
+          this[name] = value;
+        }
+      }
+
+      constructor() {
+        super();
+
+        /**
+         * @type {!Object}
+         * @private
+         */
+        this._properties = {
+          prop1: '<%= name %>'
+        };
+      }
+
+      /** 
+       * @type {string|null}
+       */
+      get prop1() {
+        return this._properties.prop1;
+      }
+
+      /** 
+       * @param {string|null} val
+       * @return {string|null}
+       */
+      set prop1(val) {
+        if (val !== this.prop1) {
+          this._properties.prop1 = val;
+          this._render();
+        }
+        return val;
+      }
+
+      connectedCallback() {
+        // Lazy creation of shadowRoot.
+        if (!this.shadowRoot) {
+          this.attachShadow({
+            mode: 'open'
+          });
+          const clone = document.importNode(templ.content, true);
+          this.shadowRoot.appendChild(clone);
+        }
+        this._render();
+      }
+
+      /**
+       * @private
+       */
+      _render() {
+        // Avoid rendering when not connected.
+        if (this.isConnected) {
+          this.shadowRoot.querySelector('#prop1').textContent = this.prop1;
+        }
+      }
+    }
+
+    window.customElements.define('<%= name %>', <%= elementClassName %>);
+  })(document.currentScript.ownerDocument);
+</script>
