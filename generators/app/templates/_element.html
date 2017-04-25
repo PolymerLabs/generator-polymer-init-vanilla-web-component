@@ -57,7 +57,7 @@
           this._properties.prop1 = val;
           this._updateRendering();
         }
-        return val;
+        return this.prop1;
       }
 
       connectedCallback() {
@@ -75,7 +75,7 @@
        */
       _updateRendering() {
         // Avoid rendering when not connected.
-        if (this.isConnected) {
+        if (this.shadowRoot && this.isConnected) {
           this.shadowRoot.querySelector('#prop1').textContent = this.prop1;
         }
       }
