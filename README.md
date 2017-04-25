@@ -1,6 +1,9 @@
+
 # polymer-init-vanilla-web-component
 
-A Yeoman generator that scaffolds a vanilla web component template
+[![Build Status](https://travis-ci.org/valdrinkoshi/generator-polymer-init-vanilla-web-component.svg?branch=master)](https://travis-ci.org/valdrinkoshi/generator-polymer-init-vanilla-web-component)
+
+A Yeoman generator that scaffolds a vanilla web component template.
 
 ### Setup
 
