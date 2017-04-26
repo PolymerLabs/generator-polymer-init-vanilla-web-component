@@ -47,7 +47,7 @@ module.exports = class extends Generator {
       this.destinationPath(),
       this.props);
     this.fs.copyTpl(
-      this.templatePath('.gitignore'),
+      this.templatePath('_gitignore'),
       this.destinationPath('.gitignore'),
       this.props);
     this.fs.copyTpl(
