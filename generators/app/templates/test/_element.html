@@ -37,7 +37,6 @@
         });
 
         test('setting a property on the element works', function() {
-          // Create a test fixture
           var element = fixture('ChangedPropertyTestFixture');
           assert.equal(element.prop1, 'new-prop1');
           var elementShadowRoot = element.shadowRoot;

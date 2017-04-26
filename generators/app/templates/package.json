@@ -5,6 +5,10 @@
   "main": "<%= name %>.html",
   "version": "0.0.1",
   "license": "MIT",
+  "keywords": [
+    "web-components",
+    "webcomponents"
+  ],
   "directories": {
     "test": "test"
   },
