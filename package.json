@@ -2,13 +2,9 @@
   "name": "generator-polymer-init-vanilla-web-component",
   "version": "0.0.2",
   "description": "A starting point for building a vanilla web component element",
-  "homepage": "https://github.com/valdrinkoshi/generator-polymer-init-vanilla-web-component",
-  "repository": "valdrinkoshi/generator-polymer-init-vanilla-web-component",
-  "author": {
-    "name": "Valdrin Koshi",
-    "email": "<valdrinkoshi@gmail.com>",
-    "url": "https://github.com/valdrinkoshi"
-  },
+  "repository": "PolymerLabs/generator-polymer-init-vanilla-web-component",
+  "author": "The Polymer Project Authors",
+  "license": "BSD-3-Clause",
   "files": [
     "generators"
   ],
@@ -34,6 +30,5 @@
   "scripts": {
     "prepublish": "gulp prepublish",
     "test": "gulp"
-  },
-  "license": "BSD-3-Clause"
+  }
 }
