@@ -42,10 +42,22 @@ module.exports = class extends Generator {
 
   writing() {
     let name = this.props.name;
-    this.fs.copyTpl(`${this.templatePath()}/**/?(.)!(_)*`, this.destinationPath(), this.props);
-    this.fs.copyTpl(this.templatePath('.gitignore'), '.gitignore', this.props);
-    this.fs.copyTpl(this.templatePath('_element.html'), `${name}.html`, this.props);
-    this.fs.copyTpl(this.templatePath('test/_element.html'), `test/${name}.html`, this.props);
+    this.fs.copyTpl(
+      `${this.templatePath()}/**/?(.)!(_)*`,
+      this.destinationPath(),
+      this.props);
+    this.fs.copyTpl(
+      this.templatePath('.gitignore'),
+      this.destinationPath('.gitignore'),
+      this.props);
+    this.fs.copyTpl(
+      this.templatePath('_element.html'),
+      this.destinationPath(`${name}.html`),
+      this.props);
+    this.fs.copyTpl(
+      this.templatePath('test/_element.html'),
+      this.destinationPath(`test/${name}.html`),
+      this.props);
   }
 
   install() {
