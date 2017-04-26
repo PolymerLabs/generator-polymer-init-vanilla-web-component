@@ -9,12 +9,11 @@
     "test": "test"
   },
   "scripts": {
-    "install": "node_modules/.bin/polymer install",
-    "start": "node_modules/.bin/polymer serve",
-    "test": "node_modules/.bin/polymer test"
+    "install": "polymer install",
+    "start": "polymer serve",
+    "test": "polymer test"
   },
   "devDependencies": {
-    "polymer-cli": "^0.18",
-    "web-component-tester": "^6"
+    "polymer-cli": "^0.18"
   }
 }
