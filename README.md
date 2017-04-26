@@ -29,5 +29,4 @@ Generate your new element using `polymer init`:
 The generated element fullfils the [publishing requirements](https://www.webcomponents.org/publish) of webcomponents.org:
 - Version defaults to **0.0.1** in `bower.json` and `package.json` - you'll still have to [tag and create a release on github](https://help.github.com/articles/creating-releases/)
 - License defaults to **MIT** in `bower.json`, `package.json`, and `README.md` - feel free to update it according to your needs
-
-Additionally, the generated `README.md` contains a comment block needed to enable inline demo in webcomponents.org.
+- `README.md` contains a comment block needed to enable inline demo in webcomponents.org - you'll have to [setup Github preview integration](https://www.webcomponents.org/preview-integration)
