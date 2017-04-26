@@ -9,10 +9,11 @@
     "test": "test"
   },
   "scripts": {
+    "install": "polymer install",
     "start": "polymer serve",
     "test": "polymer test"
   },
   "devDependencies": {
-    "web-component-tester": "^6.0.0-prerelease.5"
+    "polymer-cli": "^0.18"
   }
 }

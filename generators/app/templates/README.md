@@ -2,6 +2,10 @@
 
 <%= description %>
 
+<!-- 
+  The next comment block is used by webcomponents.org to enable inline demo.
+  Visit https://www.webcomponents.org/publish for more details.
+-->
 <!--
 ```
 <custom-element-demo>

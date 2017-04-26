@@ -14,9 +14,13 @@
 </template>
 
 <script>
-  (doc => {
-    const templ = doc.querySelector('template#<%= name %>');
+  (() => {
+    'use strict';
 
+    // Retrieve template from current script's document owner.
+    const doc = document.currentScript.ownerDocument;
+    const template = doc.querySelector('template#<%= name %>');
+    
     class <%= elementClassName %> extends HTMLElement {
 
       static get observedAttributes() {
@@ -37,27 +41,23 @@
          * @private
          */
         this._properties = {
-          prop1: '<%= name %>'
+          prop1: '<%= name %>',
         };
       }
 
       /** 
-       * @type {string|null}
+       * @property {string|null} prop1
        */
       get prop1() {
         return this._properties.prop1;
       }
 
-      /** 
-       * @param {string|null} val
-       * @return {string|null}
-       */
       set prop1(val) {
         if (val !== this.prop1) {
           this._properties.prop1 = val;
-          this._render();
+          this._updateRendering();
         }
-        return val;
+        return this.prop1;
       }
 
       connectedCallback() {
@@ -65,24 +65,22 @@
         if (!this.shadowRoot) {
           this.attachShadow({
             mode: 'open'
-          });
-          const clone = document.importNode(templ.content, true);
-          this.shadowRoot.appendChild(clone);
+          }).appendChild(document.importNode(template.content, true));
         }
-        this._render();
+        this._updateRendering();
       }
 
       /**
        * @private
        */
-      _render() {
+      _updateRendering() {
         // Avoid rendering when not connected.
-        if (this.isConnected) {
+        if (this.shadowRoot && this.isConnected) {
           this.shadowRoot.querySelector('#prop1').textContent = this.prop1;
         }
       }
     }
 
-    window.customElements.define('<%= name %>', <%= elementClassName %>);
-  })(document.currentScript.ownerDocument);
+    customElements.define('<%= name %>', <%= elementClassName %>);
+  })();
 </script>
