@@ -23,3 +23,11 @@ Generate your new element using `polymer init`:
     mkdir my-element
     cd my-element
     polymer init vanilla-web-component
+
+### Ready for webcomponents.org
+
+The generated element fullfils the [publishing requirements](https://www.webcomponents.org/publish) of webcomponents.org:
+- Version: **0.0.1**, set in `bower.json` and `package.json`. You will still have to [tag and create a release on github](https://help.github.com/articles/creating-releases/).
+- License: **MIT**, set in `bower.json`, `package.json`, and `README.md` - feel free to update it according to your needs.
+
+Additionally, the generated `README.md` contains a comment block needed to enable inline demo in webcomponents.org.
