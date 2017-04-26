@@ -5,6 +5,15 @@
   "main": "<%= name %>.html",
   "version": "0.0.1",
   "license": "MIT",
+  "keywords": [
+    "web-components",
+    "webcomponents"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
   "devDependencies": {
     "iron-demo-helpers": "PolymerElements/iron-demo-helpers#2.0-preview",
     "web-component-tester": "^6",

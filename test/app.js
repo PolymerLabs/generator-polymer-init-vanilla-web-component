@@ -11,6 +11,7 @@ describe('generator-polymer-init-vanilla-web-component:app', function () {
       .toPromise()
       .then(() => {
         assert.file([
+          '.gitignore',
           'demo',
           'demo/index.html',
           'test',
