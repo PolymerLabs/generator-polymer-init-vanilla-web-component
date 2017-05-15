@@ -15,7 +15,7 @@
     "bower_components"
   ],
   "devDependencies": {
-    "iron-demo-helpers": "PolymerElements/iron-demo-helpers#2.0-preview",
+    "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^2",
     "web-component-tester": "^6",
     "webcomponentsjs": "webcomponents/webcomponentsjs#^1"
   }
