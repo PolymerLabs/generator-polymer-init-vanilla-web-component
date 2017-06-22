@@ -1,6 +1,6 @@
 {
   "name": "generator-polymer-init-vanilla-web-component",
-  "version": "0.1.5",
+  "version": "0.2.0",
   "description": "A starting point for building a vanilla web component element",
   "repository": "PolymerLabs/generator-polymer-init-vanilla-web-component",
   "author": "The Polymer Project Authors",
